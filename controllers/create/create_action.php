@@ -10,7 +10,7 @@
         $result = $queryResult->fetchAll(PDO::FETCH_NUM);
 
         if($result){
-            if($result[0][0] != $_SESSION['userId'] AND count($result)>0){
+            if(count($result)>0){
                 $_SESSION['nameTaken'] = true;
                 header("Location: create_form.php");
                 exit;
@@ -22,7 +22,7 @@
         $result = $queryResult->fetchAll(PDO::FETCH_NUM);
 
         if($result){
-            if($result[0][0] != $_SESSION['userId'] AND count($result)>0){
+            if(count($result)>0){
                 $_SESSION['emailTaken'] = true;
                 header("Location: create_form.php");
                 exit;
